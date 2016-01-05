@@ -1,3 +1,30 @@
+Save the authorization information of Google Cloud Platform after a successful
+authorization, for the future use.
+
+
+### How it works
+
+The authorization information will be saved to `~/.appcfg_oauth2_tokens` after
+a successful authorization.
+
+Next time appcfg.py will try to use this authorization in this file.
+
+If we have the previous authorization.
+
+1. Copy the authorization file to `~/.appcfg_oauth2_tokens`
+
+2. Execute the action.
+
+If we do not have a previous authorization file.
+
+1. Remove the previous authorization information if exists.
+
+2. Execute an action to finish the authorization. Update the application, for example.
+
+3. Backup the authorization file.
+
+
+### The code
 
 ```
 function exe_cmd()
